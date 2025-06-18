@@ -1,2 +1,15 @@
-# portfolio-joseluis
-Portfolio personal desarrollado desde cero con HTML, CSS, JavaScript y GSAP. Un proyecto enfocado en mostrar mis habilidades como desarrollador backend con conocimientos de frontend moderno y computación en la nube.
+# Portfolio personal – José Luis Rodríguez
+
+Portfolio web desarrollado desde cero con HTML, CSS, JavaScript y GSAP, enfocado en demostrar mis habilidades como desarrollador backend y cloud.
+
+## Tecnologías utilizadas
+
+- HTML5
+- CSS3
+- JavaScript (ES6)
+- GSAP (GreenSock)
+- ScrollTrigger
+- GitHub Pages (para despliegue)
+
+
+
