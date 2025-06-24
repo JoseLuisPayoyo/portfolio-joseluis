@@ -49,33 +49,37 @@ section.appear {
   transform: translateY(0);
 }
 
+/*HEADER*/
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2.4rem 6rem;
-  position: fixed;
   width: 100%;
-  top: 0;
   background: rgba(13, 13, 13, 0.95);
   border-bottom: 1px solid var(--color-border);
   backdrop-filter: blur(.4rem);
   z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .logo {
   font-weight: 800;
-  font-size: var(--fs-logo);
+  font-size: 2.4rem;
   color: var(--color-accent);
   letter-spacing: 1px;
 }
-
+.nav {
+  display: flex;
+  gap: 4rem;
+}
 .nav a {
   color: var(--color-text-muted);
   text-decoration: none;
-  margin-left: 4rem;
   font-weight: 500;
-  font-size: var(--fs-large);
+  font-size: 1.8rem;
   transition: color 0.3s ease;
 }
 
@@ -83,6 +87,55 @@ section.appear {
   color: var(--color-accent);
 }
 
+/* 🍔 HAMBURGER ICON */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger img {
+  width: 28px;
+  height: auto;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 3rem;
+  }
+
+  .hamburger {
+    display: block;
+    align-self: flex-end;
+    margin-bottom: 1rem;
+  }
+  .hamburger img{
+    filter: invert(1);
+  }
+
+  .nav {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+  }
+
+  .nav.show {
+    max-height: 300px; /* Altura suficiente para los enlaces */
+  }
+
+  .nav a {
+    font-size: 1.6rem;
+    margin: 0;
+  }
+}
+/**/
 .hero {
   display: flex;
   justify-content: space-between;
@@ -126,6 +179,67 @@ section.appear {
   width: 30rem;
   height: auto;
   filter: drop-shadow(0px 0px 10px var(--color-accent-glow));
+}
+
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 3rem;
+  }
+
+  .logo {
+    font-size: 2.4rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav a {
+    margin: 0.8rem 0;
+    font-size: 1.6rem;
+  }
+
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 12rem 3rem 4rem;
+    height: auto;
+  }
+
+  .hero-content h1 {
+    font-size: 3.6rem;
+  }
+
+  .hero-content p {
+    font-size: 1.6rem;
+  }
+
+  .btn {
+    font-size: 1.6rem;
+    padding: 1rem 2.4rem;
+  }
+
+  .hero-image {
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    width: 22rem;
+    opacity: 0.08;
+    z-index: 0;
+    pointer-events: none;
+    filter: drop-shadow(0 0 10px var(--color-accent-glow));
+  }
+
+  .hero-image img {
+    width: 22rem;
+  }
 }
 
 

@@ -1,3 +1,24 @@
+const hamburger = document.getElementById('hamburger');
+const hamburgerIcon = document.getElementById('hamburger-icon');
+const nav = document.getElementById('nav');
+
+let menuAbierto = false;
+
+hamburger.addEventListener('click', () => {
+  menuAbierto = !menuAbierto;
+  nav.classList.toggle('show');
+  hamburgerIcon.src = menuAbierto ? "img/cerrar.png" : "img/hamburguesa.png";
+});
+
+document.querySelectorAll('.nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    nav.classList.remove('show');
+    hamburgerIcon.src = "img/hamburguesa.png";
+    menuAbierto = false;
+  });
+});
+
+
 const sections = document.querySelectorAll("section");
 
 const observer = new IntersectionObserver(entries => {
@@ -169,6 +190,13 @@ gsap.from(".footer", {
   duration: 1,
   ease: "power2.out"
 });
+
+
+
+
+
+
+
 
 
 
