@@ -103,6 +103,65 @@ gsap.from(".stack-item", {
   ease: "power2.out"
 });
 
+/*SOBRE MI*/
+gsap.registerPlugin(ScrollTrigger);
+
+const tlAbout = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".about",
+    start: "top 80%",
+  }
+});
+
+tlAbout.from(".about-image img", {
+  x: -100,
+  scale: 0.8,
+  opacity: 0,
+  duration: 1.2,
+  ease: "power3.out"
+});
+
+tlAbout.from(".about-title", {
+  y: 40,
+  opacity: 0,
+  duration: 0.8,
+  ease: "power2.out"
+}, "-=0.8");
+
+tlAbout.from(".about-text", {
+  y: 30,
+  opacity: 0,
+  duration: 0.8,
+  stagger: 0.2,
+  ease: "power2.out"
+}, "-=0.6");
+
+tlAbout.from(".about-values li", {
+  y: 20,
+  opacity: 0,
+  duration: 0.6,
+  stagger: 0.15,
+  ease: "power1.out"
+}, "-=0.5");
+
+
+/*CONTACTO*/
+gsap.from(".contact-container", {
+  scrollTrigger: {
+    trigger: ".contact",
+    start: "top 85%",
+  },
+  y: 120,
+  scale: 0.92,
+  opacity: 0,
+  duration: 1.5,
+  ease: "expo.out"
+});
+
+
+
+
+
 
 
 
