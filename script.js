@@ -1,3 +1,20 @@
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("appear");
+    }
+  });
+}, {
+  threshold: 0.1,
+});
+
+sections.forEach(section => {
+  observer.observe(section);
+});
+
+
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.from(".hero-content h1", {
@@ -38,5 +55,62 @@ gsap.to(".hero-image img", {
     scrub: true,
   }
 });
+
+
+/*MANIFIESTO*/
+gsap.from(".manifesto-title", {
+  scrollTrigger: {
+    trigger: ".manifesto",
+    start: "top 80%",
+  },
+  y: 30,
+  opacity: 0,
+  duration: 1,
+});
+
+gsap.from(".manifesto-text", {
+  scrollTrigger: {
+    trigger: ".manifesto",
+    start: "top 80%",
+  },
+  y: 40,
+  opacity: 0,
+  duration: 1.2,
+  delay: 0.2,
+});
+gsap.from(".manifesto-container", {
+  scrollTrigger: {
+    trigger: ".manifesto",
+    start: "top 80%",
+  },
+  opacity: 0,
+  y: 50,
+  duration: 1.2,
+  ease: "power2.out"
+});
+
+
+/*TECNOLOGÍAS*/
+gsap.from(".stack-item", {
+  scrollTrigger: {
+    trigger: ".stack-grid",
+    start: "top 80%",
+  },
+  y: 30,
+  opacity: 0,
+  duration: 0.6,
+  stagger: 0.1,
+  ease: "power2.out"
+});
+
+
+
+
+
+
+
+
+
+
 
 
