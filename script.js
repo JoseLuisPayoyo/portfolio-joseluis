@@ -158,6 +158,18 @@ gsap.from(".contact-container", {
   ease: "expo.out"
 });
 
+/*FOOTER*/
+gsap.from(".footer", {
+  scrollTrigger: {
+    trigger: ".footer",
+    start: "top 95%",
+  },
+  opacity: 0,
+  y: 40,
+  duration: 1,
+  ease: "power2.out"
+});
+
 
 
 

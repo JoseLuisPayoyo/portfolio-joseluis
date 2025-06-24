@@ -364,5 +364,46 @@ section.appear {
 }
 
 
+/*FOOTER*/
+.footer {
+  background-color: #0b0b0b;
+  border-top: 1px solid #1f1f1f;
+  padding: 3rem 6rem;
+  color: var(--color-text-secondary);
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.footer-name {
+  font-weight: 500;
+  color: #999;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 2.4rem;
+}
+
+.footer-nav a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #ff4f5a;
+}
+
+
 
 
